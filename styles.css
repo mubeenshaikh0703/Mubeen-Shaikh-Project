@@ -1,0 +1,36 @@
+/* Book Now Button Styling */
+.book-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+}
+
+.book-btn:focus {
+    outline: none;
+}
+<button class="book-btn" onclick="showBookingForm()">Book Now</button>
+
+<div id="booking-modal" class="modal">
+    <form>
+        <!-- Add your booking form here -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function showBookingForm() {
+        document.getElementById('booking-modal').style.display = 'block';
+    }
+</script>
